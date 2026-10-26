@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>气象业务导航平台</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Microsoft YaHei,sans-serif;
+        }
+        body {
+            background:#f5f7fa;
+            padding:10px;
+        }
+        .container {
+            max-width:1300px;
+            margin:0 auto;
+        }
+        .title {
+            text-align:center;
+            font-size:22px;
+            color:#2c3e50;
+            margin-bottom:10px;
+        }
+        .card {
+            background:white;
+            border-radius:6px;
+            padding:12px 15px;
+            margin-bottom:8px;
+            box-shadow:0 1px 4px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            font-size:16px;
+            color:#1f618d;
+            margin-bottom:6px;
+            border-left:4px solid #3498db;
+            padding-left:8px;
+        }
+        .card ul {
+            list-style:none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card li {
+            font-size:14px;
+            line-height:1.4;
+            margin-bottom:2px;
+            width: 25%;
+        }
+        .card li a {
+            color:#2980b9;
+            text-decoration:none;
+        }
+        .card li a:hover {
+            color:#e74c3d;
+            text-decoration:underline;
+        }
+        .footer {
+            text-align:center;
+            margin-top:12px;
+            font-size:12px;
+            color:#7f8c8d;
+        }
+    </style>
+</head>
+
+<!-- 核心加密保护：禁止查看源码 + 禁止编辑 + 禁止复制 -->
+<body oncontextmenu="return false" onselectstart="return false" onkeydown="return false" oncopy="return false" oncut="return false" onpaste="return false">
+
+<script>
+// 防F12、防控制台、防查看源代码
+document.onkeydown = function(e) {
+    if(e.keyCode == 123) return false;
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 73) return false;
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 74) return false;
+    if(e.ctrlKey && e.keyCode == 85) return false;
+};
+// 防控制台打开自动清空页面
+setInterval(function(){
+    if(window.console && console.clear) console.clear();
+},100);
+
+// ========= TXT 打开密码保护（默认密码：123456）=========
+var pwd = "123456"; // 你可以自己改密码
+var content = document.body.innerHTML;
+if(location.protocol === "file:" && location.href.endsWith(".txt")){
+    var input = prompt("请输入编辑密码：","");
+    if(input !== pwd){
+        document.body.innerHTML = "<h1>密码错误，无法编辑！</h1>";
+        document.close();
+        throw new Error("Permission denied");
+    }
+}
+</script>
+
+<div class="container">
+    <h1 class="title">气象业务综合导航</h1>
+
+    <div class="card">
+        <h2>一、平台</h2>
+        <ul>
+            <li>1. <a href="http://dash.cqmb.gov.cn/#/tianzi-weather-forecast" target="_blank">智慧气象"四天"系统一</a></li>
+            <li>2. <a href="http://10.1.64.154/idata/" target="_blank">气象综合业务网站</a></li>
+            <li>3. <a href="http://10.1.64.146/npt/" target="_blank">天气业务内网</a></li>
+            <li>4. <a href="http://10.1.64.146/nwfd/index.html#/nwfd" target="_blank">网格预报分析平台</a></li>
+            <li>5. <a href="http://10.1.64.146/analysis/?productSelect=pre24&modeSelect=ECMWF" target="_blank">天气综合分析平台</a></li>
+            <li>6. <a href="http://10.1.64.146/mtf/#/numberModel" target="_blank">中长期预报平台</a></li>
+            <li>7. <a href="http://10.1.64.146/stweather/#/monitor" target="_blank">强天气诊断分析平台</a></li>
+            <li>8. <a href="http://10.228.64.100/PID286WARMSv21a/287.html" target="_blank">CMA-SH模式</a></li>
+            <li>9. <a href="http://www.ium.cn:8000/st3.0/" target="_blank">RMAPS</a></li>
+            <li>10. <a href="http://10.230.124.115:82/#/inspect" target="_blank">重庆数值预报系统</a></li>
+            <li>11. <a href="http://10.230.124.68:84/convection" target="_blank">“天资·千里”AI模型</a></li>
+            <li>12. <a href="https://www.nmc.cn/" target="_blank">中央气象台</a></li>
+            <li>13. <a href="http://quxian.zhitian.cqmb.gov.cn/login/index" target="_blank">知天·数字气象服务系统</a></li>
+            <li>14. <a href="http://10.230.124.68:3000/home" target="_blank">精准预报·智能天气预报系统</a></li>
+            <li>15. <a href="http://111.10.228.202:8103/qj-valley-new/#/login#reloaded" target="_blank">支撑系统</a></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>二、实况</h2>
+        <ul>
+            <li>1. <a href="https://fw.cqzhitian.cn/cqqx/#/map/monitor-warning" target="_blank">重庆综合预警</a></li>
+            <li>2. <a href="http://app.lan.tianshu.cq.cma/data-portal/#/open/analysis" target="_blank">气象+大数据</a></li>
+            <li>3. <a href="http://10.1.64.146/nwfd/index.html#/dysk" target="_blank">多源实况</a></li>
+            <li>4. <a href="http://10.1.64.154/art/#/home/default" target="_blank">天擎实况</a></li>
+            <li>5. <a href="http://10.1.64.154/radar3/main" target="_blank">天衡天衍</a></li>
+            <li>6. <a href="http://10.1.64.146/swan3/#/WeatherMonitoring" target="_blank">SWAN3.0</a></li>
+            <li>7. <a href="http://10.1.64.146/stweather/swan4/#/" target="_blank">SWAN4.0</a></li>
+            <li>8. <a href="http://172.24.176.202:8888/#/login" target="_blank">相控阵雷达</a></li>
+            <li>9. <a href="http://rsapp.nsmc.org.cn/geofy/" target="_blank">风云四号</a></li>
+            <li>10. <a href="http://10.1.64.154/fydq/#/zc" target="_blank">风云地球</a></li>
+            <li>11. <a href="http://172.24.176.66/#/view/portal" target="_blank">重庆气象数据网</a></li>
+            <li>12. <a href="http://10.230.134.61:9090/#/pro-pro" target="_blank">地基遥感垂直观测系统</a></li>
+            <li>13. <a href="http://172.24.176.84:8080/CIMAS/login/index.html" target="_blank">重庆气候监测分析平台</a></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>三、预报</h2>
+        <ul>
+            <li>1. <a href="http://10.230.124.68:82/forecastMake" target="_blank">网格预报</a></li>
+            <li>2. <a href="http://10.230.124.68:222/" target="_blank">短临预警</a></li>
+            <li>3. <a href="http://10.230.124.68:1246/WarnProducts" target="_blank">风险预警</a></li>
+            <li>4. <a href="http://10.230.124.68:1138/main" target="_blank">决策服务</a></li>
+            <li>5. <a href="http://10.230.124.68:1139/gridPage" target="_blank">重庆检验</a></li>
+            <li>6. <a href="http://10.1.64.146/nwfd/index.html#/ssjy" target="_blank">中央台检验</a></li>
+            <li>7. <a href="http://10.1.64.154/areaHighResolution" target="_blank">气科院检验</a></li>
+            <li>8. <a href="http://10.1.64.146/nvsnew/dist/" target="_blank">中央台评分</a></li>
+            <li>9. <a href="http://cases.lan.tianzi.cqmb.gov.cn/case/analysis" target="_blank">个例库</a></li>
+            <li>10. <a href="http://172.24.176.176/index.html" target="_blank">灾重填报</a></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>四、知识</h2>
+        <ul>
+            <li>1. <a href="知识/重庆地形与名山.jpg" target="_blank">重庆地形</a></li>
+            <li>2. <a href="知识/蒲福风力等级表.pdf" target="_blank">蒲福风力等级表</a></li>
+            <li>3. <a href="知识/重庆市预报分区示意图.png" target="_blank">预报分区</a></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>五、规定</h2>
+        <ul>
+            <li>1. <a href="规定/汛期气象服务手册.pdf" target="_blank">汛期气象服务手册</a></li>
+            <li>2. <a href="规定/全市极端强对流天气定向发布标准.pdf" target="_blank">极端警报标准</a></li>
+            <li>3. <a href="规定/预报预警业务平台及资料应用.pdf" target="_blank">短临预警培训</a></li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Update time：2026-05-08
+    </div>
+</div>
+
+</body>
+</html>
